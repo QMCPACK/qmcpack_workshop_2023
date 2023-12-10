@@ -14,7 +14,7 @@ Recordings of the presentations will be uploaded on the [QMCPACK YouTube channel
 * "Fostering accuracy in modelling materials and molecular complexes with quantum Monte Carlo", Andrea Zen (Universita di Napoli, Italy).
 * "TBD", Fernando Reboredo (ORNL).
 * "QMCPACK force calculations for effective potentials of dense hydrogen", David Ceperley (UIUC).
-* "Features and progress towards v4.0 of QMCPACK", Paul Kent (ORNL).
+* "Towards QMCPACK v4.0", Paul Kent (ORNL). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/Kent_Towards_QMCPACK_v4_vfinal.pdf)
 * "Driving the batched code with NEXUS", Jaron Krogel (ORNL).
 * "CPU and GPU performance of the batched code", Ye Luo (ANL).
 
