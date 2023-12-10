@@ -10,7 +10,7 @@ Recordings of the presentations will be uploaded on the [QMCPACK YouTube channel
 
 ## Day 1 Presentations
 
-* Workshop Introduction, Paul Kent (ORNL). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/master/Kent_Introduction_vfinal.pdf)
+* Workshop Introduction, Paul Kent (ORNL). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/Kent_Introduction_vfinal.pdf)
 * "Fostering accuracy in modelling materials and molecular complexes with quantum Monte Carlo", Andrea Zen (Universita di Napoli, Italy).
 * "TBD", Fernando Reboredo (ORNL).
 * "QMCPACK force calculations for effective potentials of dense hydrogen", David Ceperley (UIUC).
