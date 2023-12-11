@@ -33,4 +33,4 @@ Recordings of the presentations will be uploaded on the [QMCPACK YouTube channel
 * "VMC Wave Function Optimization for Excited States in Molecules and Solids", Leon Otis (University Of Chicago).
 * "Force-free identification of minimum-energy pathways and transition states using quantum Monte Carlo methods", Gopal Iyer (Brown University).
 * "Modeling Correlated Two-Dimensional Magnets with QMC", Can Ataca (University of Maryland, Baltimore County).
-* "Enhanced Twist-Averaging Technique for Magnetic Metals: Applications using Quantum Monte Carlo", Gani Annaberdiyev (ORNL). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/Gani_CTA.pdf)
+* "Enhanced Twist-Averaging Technique for Magnetic Metals: Applications using Quantum Monte Carlo", Gani Annaberdiyev (ORNL). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/Gani_GCTA.pdf)
