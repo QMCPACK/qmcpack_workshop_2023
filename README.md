@@ -21,16 +21,16 @@ Recordings of the presentations will be uploaded on the [QMCPACK YouTube channel
 ## Day 2 Presentations
 
 * "Accurate Electronic and Magnetic Properties of 2D Materials Using Quantum Monte Carlo Methods", Daniel Wines (NIST).
-* "Spin Orbit Coupling in QMCPACK", Cody Melon (SNL)   
-* "Development of new correlation-consistent effective core potentials", Benjamin Kincade (NCSU)
-* "Orbital Optimization", Joshua Townsend and Amanda Dumi (SNL)
-* "Use of the surrogate Hessian method for geometry optimization", Jaron Krogel (ORNL)
-* "Fermi surface calculation with QMCPACK", Jaron Krogel (ORNL)
+* "Spin Orbit Coupling in QMCPACK", Cody Melon (SNL).   
+* "Development of new correlation-consistent effective core potentials", Benjamin Kincade (NCSU).
+* "Orbital Optimization", Joshua Townsend and Amanda Dumi (SNL).
+* "Use of the surrogate Hessian method for geometry optimization", Jaron Krogel (ORNL).
+* "Fermi surface calculation with QMCPACK", Jaron Krogel (ORNL).
 
 ## Day 3 Presentations
 
-* "Using Quantum Monte Carlo to understand hydrogen storage in metal decorated graphene", Yasmine Al-Hamadani (UCL)
-* "VMC Wave Function Optimization for Excited States in Molecules and Solids", Leon Otis (University Of Chicago)
-* "Force-free identification of minimum-energy pathways and transition states using quantum Monte Carlo methods", Gopal Iyer (Brown University)
-* "Modeling Correlated Two-Dimensional Magnets with QMC", Can Ataca (University of Maryland, Baltimore County)
-* "Enhanced Twist-Averaging Technique for Magnetic Metals: Applications using Quantum Monte Carlo", Gani Annaberdiyev (ORNL)
+* "Using Quantum Monte Carlo to understand hydrogen storage in metal decorated graphene", Yasmine Al-Hamadani (UCL).
+* "VMC Wave Function Optimization for Excited States in Molecules and Solids", Leon Otis (University Of Chicago).
+* "Force-free identification of minimum-energy pathways and transition states using quantum Monte Carlo methods", Gopal Iyer (Brown University).
+* "Modeling Correlated Two-Dimensional Magnets with QMC", Can Ataca (University of Maryland, Baltimore County).
+* "Enhanced Twist-Averaging Technique for Magnetic Metals: Applications using Quantum Monte Carlo", Gani Annaberdiyev (ORNL). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/Gani_CTA.pdf)
