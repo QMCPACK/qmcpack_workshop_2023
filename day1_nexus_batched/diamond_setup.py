@@ -3,7 +3,6 @@ from nexus import generate_physical_system
 
 settings(
     pseudo_dir = './pseudopotentials',
-    #runs       = './',
     results    = '',
     sleep      = 3,
     machine    = 'ws16',
