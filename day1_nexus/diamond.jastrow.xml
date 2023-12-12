@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<qmcsystem>
+  <wavefunction name="psi0" target="e">
+    <jastrow type="One-Body" name="J1" function="bspline" source="ion0" print="yes">
+       <correlation elementType="C" size="5" rcut="2.385185123200013" cusp="0.0">
+          <coefficients id="eC" type="Array"> -0.2102462269 -0.1585937311 -0.1331248169 -0.09027557351 -0.04681673723</coefficients>
+       </correlation>
+    </jastrow>
+    <jastrow type="Two-Body" name="J2" function="bspline" print="yes">
+       <correlation speciesA="u" speciesB="u" size="5" rcut="2.385185123200013">
+          <coefficients id="uu" type="Array"> 0.2270240954 0.1527007447 0.09884745172 0.05326872436 0.02501205244</coefficients>
+       </correlation>
+       <correlation speciesA="u" speciesB="d" size="5" rcut="2.385185123200013">
+          <coefficients id="ud" type="Array"> 0.3842085387 0.2585946933 0.1592793492 0.08313450089 0.03723333517</coefficients>
+       </correlation>
+    </jastrow>
+  </wavefunction>
+</qmcsystem>
