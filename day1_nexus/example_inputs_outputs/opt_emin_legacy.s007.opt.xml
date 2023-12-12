@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<qmcsystem>
+  <wavefunction name="psi0" target="e">
+         <sposet_builder type="bspline" href="../diamond.orbitals.h5" tilematrix="1 0 0 0 1 0 0 0 1" twistnum="0" source="ion0" version="0.10" meshfactor="1.0" precision="float" truncate="no">
+            <sposet type="bspline" name="spo_ud" size="4" spindataset="0"/>
+         </sposet_builder>
+         <determinantset>
+            <slaterdeterminant>
+               <determinant id="updet" group="u" sposet="spo_ud" size="4"/>
+               <determinant id="downdet" group="d" sposet="spo_ud" size="4"/>
+            </slaterdeterminant>
+         </determinantset>
+         <jastrow type="One-Body" name="J1" function="bspline" source="ion0" print="yes">
+            <correlation elementType="C" size="5" rcut="2.385185123200013" cusp="0.0">
+               <coefficients id="eC" type="Array"> -0.2314670406 -0.1795731706 -0.1513574218 -0.1034077966 -0.05380149736</coefficients>
+            </correlation>
+         </jastrow>
+         <jastrow type="Two-Body" name="J2" function="bspline" print="yes">
+            <correlation speciesA="u" speciesB="u" size="5" rcut="2.385185123200013">
+               <coefficients id="uu" type="Array"> 0.2867806537 0.1946432358 0.1254843332 0.06707821249 0.03181477325</coefficients>
+            </correlation>
+            <correlation speciesA="u" speciesB="d" size="5" rcut="2.385185123200013">
+               <coefficients id="ud" type="Array"> 0.4749816828 0.3052596033 0.1856215513 0.0961808296 0.04299052238</coefficients>
+            </correlation>
+         </jastrow>
+      <override_variational_parameters href="opt_emin_legacy.s007.vp.h5"/></wavefunction>
+</qmcsystem>

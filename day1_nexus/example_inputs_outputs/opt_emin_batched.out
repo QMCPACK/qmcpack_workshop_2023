@@ -1,0 +1,1532 @@
+  Input file(s): opt_emin_batched.in.xml 
+================================================================
+                        QMCPACK 3.17.9
+
+          (c) Copyright 2003-2023 QMCPACK developers
+
+                         Please cite:
+      J. Kim et al. J. Phys. Cond. Mat. 30 195901 (2018)
+           https://doi.org/10.1088/1361-648X/aab9c3
+                             and
+       P. Kent et al. J. Chem. Phys. 152 174105 (2020)
+              https://doi.org/10.1063/5.0004860
+
+  Git branch: develop
+  Last git commit: 3fe4a91c663b9d9f075018e9281c07905fdeb00c
+  Last git commit date: Wed Dec 6 11:44:06 2023 -0800
+  Last git commit subject: Merge pull request #4859 from PDoakORNL/consistent_precision_inputsection
+================================================================
+  Global options 
+
+  Total number of MPI ranks = 3
+  Number of MPI groups      = 1
+  MPI group ID              = 0
+  Number of ranks in group  = 3
+  MPI ranks per node        = 3
+  OMP 1st level threads     = 4
+  OMP nested threading disabled or only 1 thread on the 2nd level
+
+  Precision used in this calculation, see definitions in the manual:
+  Base precision      = double
+  Full precision      = double
+
+  CPU only build
+  Real build. QMC_COMPLEX=OFF
+  Timer build option is enabled. Current timer level is coarse
+
+=================================================
+--- Memory usage report : when QMCPACK starts ---
+=================================================
+Available memory on node 0, free + buffers :   55273 MiB
+Memory footprint by rank 0 on node 0       :      21 MiB
+=================================================
+
+  Input XML = opt_emin_batched.in.xml
+
+  Project = opt_emin_batched
+  date    = 2023-12-11 20:26:59 EST
+  host    = LAP0132821
+
+
+ Random Number
+ -------------
+  Offset for the random number seeds based on time: 739
+
+  Range of prime numbers to use as seeds over processors and threads = 5641-5717
+
+
+ Lattice
+ -------
+  Simulation cell radius   = 1.947495 bohr
+  Wigner-Seitz cell radius = 2.385185 bohr
+
+  Overwriting global supercell 
+  Long-range breakup parameters:
+    rc*kc = 15.000000; rc = 1.947495; kc = 7.702200; tol = 0.000300
+  KContainer initialised with cutoff 7.702200
+   # of K-shell  = 25
+   # of K points = 608
+
+  Lattice (bohr):      3.3731611500      3.3731611500      0.0000000000
+                       0.0000000000      3.3731611500      3.3731611500
+                       3.3731611500      0.0000000000      3.3731611500
+
+  Boundary Conditions:  p  p  p 
+
+  Volume (bohr^3) = 76.7611133056
+
+  Reciprocal vectors without 2*pi.
+    g_1 =       0.1482289098      0.1482289098     -0.1482289098
+    g_2 =      -0.1482289098      0.1482289098      0.1482289098
+    g_3 =       0.1482289098     -0.1482289098      0.1482289098
+
+  Metric tensor in real-space.
+    h_1 = 22.7564322877 11.3782161439 11.3782161439 
+    h_2 = 11.3782161439 22.7564322877 11.3782161439 
+    h_3 = 11.3782161439 11.3782161439 22.7564322877 
+
+  Metric tensor in g-space.
+    h_1 = 2.6022368383 -0.8674122794 -0.8674122794 
+    h_2 = -0.8674122794 2.6022368383 -0.8674122794 
+    h_3 = -0.8674122794 -0.8674122794 2.6022368383 
+
+ Particle Set
+ ------------
+  Name: e   Offload : no
+
+  All the species have the same mass 1.0000000000
+
+  Creating Structure Factor for periodic systems 7.7022000901
+  Particle set size: 8   Groups : 2
+
+
+ Particle Set
+ ------------
+  Name: ion0   Offload : no
+
+  All the species have the same mass 21894.7135905729
+
+  Creating Structure Factor for periodic systems 7.7022000901
+  Particle set size: 2   Groups : 1
+
+
+ Many-body wavefunction
+ -------------------
+  Name: psi0   Tasking: no
+
+
+   Single particle orbitals (SPO) collection
+   -----------------------------------------
+    Name: bspline   Type input: bspline
+
+  Created SPOSet builder named 'bspline' of type bspline
+
+     Single particle orbitals (SPO)
+     ------------------------------
+      Name: spo_ud   Type: spline   Builder class name: EinsplineSetBuilder
+
+  TileMatrix = 
+ [  1  0  0
+    0  1  0
+    0  0  1 ]
+  Reading 4 orbitals from HDF5 file.
+  HDF5 orbital file version 2.0.0
+  Reading orbital file in ESHDF format.
+  ESHDF orbital file version 2.0.0
+  Lattice = 
+    [  3.373161  3.373161  0.000000
+       0.000000  3.373161  3.373161
+       3.373161  0.000000  3.373161 ]
+  SuperLattice = 
+    [  3.373161  3.373161  0.000000
+       0.000000  3.373161  3.373161
+       3.373161  0.000000  3.373161 ]
+
+bands=8, elecs=8, spins=1, twists=1
+Atom type(0) = 6
+Atom type(1) = 6
+   Skip initialization of the density
+TIMER  EinsplineSetBuilder::ReadOrbitalInfo 0.0015466340
+TIMER  EinsplineSetBuilder::BroadcastOrbitalInfo 0.0000340320
+Found 1 distinct supercell twist based on 1 primitive cell k-point
+Super twist #0:  [   0.00000   0.00000   0.00000 ]
+WARNING twist attribute does't exist but twistnum attribute was found. This is potentially ambiguous. Specifying twist attribute is preferred.
+  Using supercell twist 0:  [   0.00000   0.00000   0.00000]
+Using 1 copies of twist angle [ 0.000,  0.000,  0.000]
+Using real splines.
+8 complex-valued orbitals supplied by h5 can be expanded up to 8 SPOs.
+Sorting the bands now:
+We will read 4 distinct complex-valued orbitals from h5.
+    Using real valued spline SPOs with real single precision storage (R2R).
+    Running on CPU.
+BandInfoGroup::selectBands bigspace has 8 distinct orbitals 
+BandInfoGroup::selectBands using distinct orbitals [0,4)
+  Number of distinct bands 4
+  First Band index 0
+  First SPO index 0
+  Size of SPOs 4
+  ClassName = SplineR2R
+  Using real einspline table
+NumDistinctOrbitals 4 numOrbs = 4
+  TwistIndex = 0 TwistAngle       0.0000000000      0.0000000000      0.0000000000
+   HalfG =                  0                 0                 0
+B-spline mesh factor is 1.0000000000
+B-spline mesh size is (40, 40, 40)
+Maxmimum number of Gvecs 3695
+MEMORY 2 MB allocated for the coefficients in 3D spline orbital representation
+Start transforming plane waves to 3D B-Splines.
+  Time to gather the table = 0.0007441480
+  SplineSetReader initialize_spline_pio 0.0085736270 sec
+  Time to bcast the table = 0.0005744430
+Time spent in creating B-spline SPOs 0.0102196200 sec
+
+   Single Slater determinant
+   -------------------------
+
+     Determinant
+     -----------
+      Name: updet   Spin group: 0   SPO name: spo_ud
+
+      Setting delay_rank to default value 1
+      Using rank-1 Sherman-Morrison Fahy update (SM1)
+      Running on CPU.
+
+
+     Determinant
+     -----------
+      Name: downdet   Spin group: 1   SPO name: spo_ud
+
+      Setting delay_rank to default value 1
+      Using rank-1 Sherman-Morrison Fahy update (SM1)
+      Running on CPU.
+
+  Added a fermionic WaveFunctionComponent SlaterDet
+
+   Jastrow
+   -------
+    Name: J1   Type: One-Body   Function: bspline
+
+    Radial function for element: C - e
+     Number of parameters: 5
+     Cusp: 0.0000000000
+     Cutoff radius: 2.3851851232
+
+     Name                        Value Type Recompute Use Index
+     ---- ---------------------------- ---- --------- --- -----
+     eC_0                 0.000000e+00    1         1  ON     0
+     eC_1                 0.000000e+00    1         1  ON     1
+     eC_2                 0.000000e+00    1         1  ON     2
+     eC_3                 0.000000e+00    1         1  ON     3
+     eC_4                 0.000000e+00    1         1  ON     4
+
+
+   Jastrow
+   -------
+    Name: J2   Type: Two-Body   Function: bspline
+
+    Radial function for species: u - u
+     Number of parameters: 5
+     Cusp: -0.25
+     Cutoff radius: 2.38519
+
+     Name                        Value Type Recompute Use Index
+     ---- ---------------------------- ---- --------- --- -----
+     uu_0                 0.000000e+00    1         1  ON     0
+     uu_1                 0.000000e+00    1         1  ON     1
+     uu_2                 0.000000e+00    1         1  ON     2
+     uu_3                 0.000000e+00    1         1  ON     3
+     uu_4                 0.000000e+00    1         1  ON     4
+
+    Radial function for species: u - d
+     Number of parameters: 5
+     Cusp: -0.5
+     Cutoff radius: 2.38519
+
+     Name                        Value Type Recompute Use Index
+     ---- ---------------------------- ---- --------- --- -----
+     ud_0                 0.000000e+00    1         1  ON     0
+     ud_1                 0.000000e+00    1         1  ON     1
+     ud_2                 0.000000e+00    1         1  ON     2
+     ud_3                 0.000000e+00    1         1  ON     3
+     ud_4                 0.000000e+00    1         1  ON     4
+
+  Adding psi0 TrialWaveFunction to the pool
+
+ Hamiltonian and observables
+ ---------------------------
+  Name: h0
+
+  QMCHamiltonian::addOperator Kinetic to H, physical Hamiltonian 
+
+   Pseudo Potential
+   ----------------
+    Name: PseudoPot   Wavefunction : psi0
+
+
+  Adding pseudopotential for C
+   Linear grid  ri=0 rf=10 npts = 10001
+    ECPComponentBuilder::buildSemiLocalAndLocal 
+WARNING Nrule was not determined from qmcpack input or pseudopotential file. Setting sensible default.
+    Assuming Hartree unit
+ l-local setting found in pseudopotential file and used.
+   Number of angular momentum channels 2
+   Maximum angular momentum channel (Lmax) 1
+   Creating a Linear Grid Rmax=1.7
+  Using global grid with delta = 0.001
+   Making L=1 a local potential with a radial cutoff of 9.999
+  Quadrature Nrule: 4
+    Non-local pseudopotential parameters
+    Maximum angular momentum = 0
+    Number of non-local channels = 1
+       l(0)=0
+    Cutoff radius = 1.7
+    Number of spherical integration grid points = 12
+    Spherical grid and weights: 
+                        1                 0                 0       0.08333333333
+                       -1   1.224646799e-16                 0       0.08333333333
+             0.4472135955       0.894427191                 0       0.08333333333
+            -0.4472135955      0.7236067977      0.5257311121       0.08333333333
+             0.4472135955      0.2763932023      0.8506508084       0.08333333333
+            -0.4472135955     -0.2763932023      0.8506508084       0.08333333333
+             0.4472135955     -0.7236067977      0.5257311121       0.08333333333
+            -0.4472135955      -0.894427191   1.095357397e-16       0.08333333333
+             0.4472135955     -0.7236067977     -0.5257311121       0.08333333333
+            -0.4472135955     -0.2763932023     -0.8506508084       0.08333333333
+             0.4472135955      0.2763932023     -0.8506508084       0.08333333333
+            -0.4472135955      0.7236067977     -0.5257311121       0.08333333333
+    Maximum cutoff radius 1.7
+
+  Creating CoulombHandler with the Esler Optimized Breakup. 
+  KContainer initialised with cutoff 44.35276521
+   # of K-shell  = 759
+   # of K points = 113394
+
+  NUMBER OF OPT_BREAK KVECS = 37906580313
+ finding kc:  7.70220009 , 7.70220009
+  LRBreakp parameter Kc =7.70220009
+    Continuum approximation in k = [44.35276521,3080.880036)
+
+   LR Breakup chi^2 = 1.13641e-15
+   Constant of PBCAB 1.2787
+  Rcut                1.9475
+  Maximum K shell     24
+  Number of k vectors 608
+    CoulombPBCAB::add 
+ Setting a linear grid=[0,1.9475) number of grid =1948
+    Creating the short-range pseudopotential for species 0
+  QMCHamiltonian::addOperator LocalECP to H, physical Hamiltonian 
+
+  Using NonLocalECP potential 
+    Maximum grid on a sphere for NonLocalECPotential: 12
+    Using batched ratio computing in NonLocalECP
+  QMCHamiltonian::addOperator NonLocalECP to H, physical Hamiltonian 
+
+   Coulomb Potential
+   -----------------
+    Name: ElecElec   Type: AA   PBC: yes
+
+  Clone CoulombHandler. 
+   PBCAA self-interaction term -6.2993
+   PBCAA total constant -6.9387
+  Maximum K shell 24
+  Number of k vectors 608
+  Fixed Coulomb potential for e
+    e-e Madelung Const. =-0.33980456
+    Vtot     =0
+  QMCHamiltonian::addOperator ElecElec to H, physical Hamiltonian 
+QMCHamiltonian::addOperatorType added type coulomb named ElecElec
+
+   Coulomb Potential
+   -----------------
+    Name: IonIon   Type: AA   PBC: yes
+
+  Clone CoulombHandler. 
+   PBCAA self-interaction term -25.197214
+   PBCAA total constant -25.836584
+Checking ion-ion Ewald energy against reference...
+  Check passed.
+  Maximum K shell 24
+  Number of k vectors 608
+  Fixed Coulomb potential for ion0
+    e-e Madelung Const. =-0.33980456
+    Vtot     =-12.775667
+  QMCHamiltonian::addOperator IonIon to H, physical Hamiltonian 
+QMCHamiltonian::addOperatorType added type coulomb named IonIon
+
+  QMCHamiltonian::add2WalkerProperty added
+    5 to P::PropertyList 
+    0 to P::Collectables 
+    starting Index of the observables in P::PropertyList = 9
+ParticleSetPool::randomize 1 ParticleSet.
+<init source="ion0" target="e">
+</init>
+  Initialization Execution time = 0.201 secs
+=========================================================
+ Summary of QMC systems 
+=========================================================
+ParticleSetPool has: 
+
+  ParticleSet 'e' contains 8 particles :  u(4) d(4)
+
+    u  2.8099734267e+00  7.9224973992e-01  2.7246660672e+00
+    u  4.0292761021e+00  9.6687907519e-01  3.3665310504e+00
+    u  1.0085774119e+00  1.9175895846e+00  2.6097991231e+00
+    u  2.7105088538e+00  1.2550976828e+00  2.0482148345e+00
+    d  3.1051510295e+00  3.7964954098e+00  1.0556252244e+00
+    d  9.4076711013e-01  3.6653335731e+00  4.0016342634e+00
+    d  1.4435125823e+00  2.7614674997e+00  2.0750673787e+00
+    d  2.5986496443e+00  2.4130195572e+00  1.7627538628e+00
+
+  Distance table for dissimilar particles (A-B):
+    source: ion0  target: e
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use general periodic cell in 3D with corner image checks.
+
+  Distance table for similar particles (A-A):
+    source/target: e
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use general periodic cell in 3D with corner image checks.
+
+
+  ParticleSet 'ion0' contains 2 particles :  C(2)
+
+    C  0.0000000000e+00  0.0000000000e+00  0.0000000000e+00
+    C  1.6865805800e+00  1.6865805800e+00  1.6865805800e+00
+
+  Distance table for similar particles (A-A):
+    source/target: ion0
+    Using structure-of-arrays (SoA) data layout
+    Distance computations use general periodic cell in 3D with corner image checks.
+
+
+  Hamiltonian h0
+  Kinetic         Kinetic energy
+  LocalECP        CoulombPBCAB potential source: ion0
+  NonLocalECP     NonLocalECPotential: ion0
+  ElecElec        CoulombPBCAA potential: e_e
+  IonIon          CoulombPBCAA potential: ion0_ion0
+
+Loop execution max-interations = 3
+
+========================================
+  Reading WFOpt driver XML input section
+========================================
+  Random walking without drift
+  Adding a default LocalEnergyEstimator for the MainEstimator 
+EstimatorManager setup for this section:
+  Main Estimator:  LocalEnergy
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root opt_emin_batched.s000
+=========================================================
+  Random walking without drift
+  Adding a default LocalEnergyEstimator for the MainEstimator 
+EstimatorManager setup for this section:
+  Main Estimator:  LocalEnergy
+
+=========================================================
+  Start VMCBatched
+  File Root opt_emin_batched.s000
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers :   55218 MiB
+Memory footprint by rank 0 on node 0       :      53 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 12
+             walkers_per_rank  = [4(x3)]
+             num_crowds        = 4
+  on rank 0, walkers_per_crowd = [1(x4)]
+
+VMCBatched Driver collecting samples, samples per rank = 17600
+                                      total samples    = 52800
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+WARNING Input tag "nonlocalpp" has been deprecated and will be deleted in the next release!
+WARNING Input tag "use_nonlocalpp_deriv" has been deprecated and will be deleted in the next release!
+WARNING 'nonlocalpp' no more affects any part of the execution. Please remove it from your input file.
+WARNING 'use_nonlocalpp_deriv' no more affects any part of the execution. Please remove it from your input file.
+ TrialWaveFunction "psi0" has 3 optimizable objects:
+   'eC' optimized
+   'uu' optimized
+   'ud' optimized
+ Variational subset selects 15 parameters.
+ In total 15 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+<optimization-report>
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers :   55188 MiB
+Memory footprint by rank 0 on node 0       :      59 MiB
+===================================================================
+Warm-up is completed!
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers :   55188 MiB
+Memory footprint by rank 0 on node 0       :      59 MiB
+=====================================================
+====================================================
+  End of a VMC block
+    QMC counter        = 0
+    time step          = 0.3
+    reference energy   = -10.2551
+    reference variance = 1.81006
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers :   55179 MiB
+Memory footprint by rank 0 on node 0       :      59 MiB
+=============================================
+  Carry over 12 walker configurations to the next QMC driver.
+  Execution time = 4.1024e+00
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot 
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -1.0255e+01
+  VMC Evar = 1.8100e+00
+  Total weights = 5.2800e+04
+  Execution time = 1.4466e+00
+  </log>
+</opt>
+<opt stage="main" walkers="52800">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 15 optimized parameters, largest LM parameter change : 3.4674e-01 at parameter 10
+Effective weight of all the samples measured by correlated sampling is 9.1975e-01
+
+******************************************************************************
+Init Cost =  -9.0486e+00    New Cost =  -9.3868e+00  Delta Cost =  -3.3820e-01
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   2.5000e-01
+*****************************************************************************
+  Execution time = 6.1843e+00
+  </log>
+  <optVariables href="opt_emin_batched.s000.opt.xml">
+eC_0                -1.761446e-01 1 1  ON 0
+eC_1                -1.370889e-01 1 1  ON 1
+eC_2                -1.132734e-01 1 1  ON 2
+eC_3                -7.787354e-02 1 1  ON 3
+eC_4                -4.139720e-02 1 1  ON 4
+uu_0                 1.722509e-01 1 1  ON 5
+uu_1                 1.440468e-01 1 1  ON 6
+uu_2                 8.910186e-02 1 1  ON 7
+uu_3                 4.809903e-02 1 1  ON 8
+uu_4                 2.287479e-02 1 1  ON 9
+ud_0                 3.467399e-01 1 1  ON 10
+ud_1                 2.288251e-01 1 1  ON 11
+ud_2                 1.352432e-01 1 1  ON 12
+ud_3                 6.907866e-02 1 1  ON 13
+ud_4                 3.003294e-02 1 1  ON 14
+  </optVariables>
+</opt>
+</optimization-report>
+  QMC Execution time = 6.185 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root opt_emin_batched.s001
+=========================================================
+  Random walking without drift
+  Adding a default LocalEnergyEstimator for the MainEstimator 
+EstimatorManager setup for this section:
+  Main Estimator:  LocalEnergy
+
+=========================================================
+  Start VMCBatched
+  File Root opt_emin_batched.s001
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers :   55171 MiB
+Memory footprint by rank 0 on node 0       :      73 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 12
+             walkers_per_rank  = [4(x3)]
+             num_crowds        = 4
+  on rank 0, walkers_per_crowd = [1(x4)]
+
+VMCBatched Driver collecting samples, samples per rank = 17600
+                                      total samples    = 52800
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+WARNING Input tag "nonlocalpp" has been deprecated and will be deleted in the next release!
+WARNING Input tag "use_nonlocalpp_deriv" has been deprecated and will be deleted in the next release!
+WARNING 'nonlocalpp' no more affects any part of the execution. Please remove it from your input file.
+WARNING 'use_nonlocalpp_deriv' no more affects any part of the execution. Please remove it from your input file.
+ TrialWaveFunction "psi0" has 3 optimizable objects:
+   'eC' optimized
+   'uu' optimized
+   'ud' optimized
+ Variational subset selects 15 parameters.
+ In total 15 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+<optimization-report>
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers :   55171 MiB
+Memory footprint by rank 0 on node 0       :      73 MiB
+===================================================================
+Warm-up is completed!
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers :   55171 MiB
+Memory footprint by rank 0 on node 0       :      73 MiB
+=====================================================
+====================================================
+  End of a VMC block
+    QMC counter        = 1
+    time step          = 0.3
+    reference energy   = -10.4706
+    reference variance = 0.384041
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers :   55125 MiB
+Memory footprint by rank 0 on node 0       :      73 MiB
+=============================================
+  Carry over 12 walker configurations to the next QMC driver.
+  Execution time = 4.4082e+00
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot 
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -1.0471e+01
+  VMC Evar = 3.8401e-01
+  Total weights = 5.2800e+04
+  Execution time = 1.5663e+00
+  </log>
+</opt>
+<opt stage="main" walkers="52800">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 15 optimized parameters, largest LM parameter change : 1.1724e-01 at parameter 10
+Effective weight of all the samples measured by correlated sampling is 9.9117e-01
+
+******************************************************************************
+Init Cost =  -9.3851e+00    New Cost =  -9.3913e+00  Delta Cost =  -6.1909e-03
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   6.2500e-02
+*****************************************************************************
+  Execution time = 6.6160e+00
+  </log>
+  <optVariables href="opt_emin_batched.s001.opt.xml">
+eC_0                -2.248546e-01 1 1  ON 0
+eC_1                -1.765815e-01 1 1  ON 1
+eC_2                -1.481108e-01 1 1  ON 2
+eC_3                -1.007595e-01 1 1  ON 3
+eC_4                -5.235842e-02 1 1  ON 4
+uu_0                 2.518196e-01 1 1  ON 5
+uu_1                 1.896786e-01 1 1  ON 6
+uu_2                 1.222187e-01 1 1  ON 7
+uu_3                 6.542316e-02 1 1  ON 8
+uu_4                 3.092868e-02 1 1  ON 9
+ud_0                 4.639758e-01 1 1  ON 10
+ud_1                 3.000694e-01 1 1  ON 11
+ud_2                 1.820162e-01 1 1  ON 12
+ud_3                 9.473644e-02 1 1  ON 13
+ud_4                 4.223070e-02 1 1  ON 14
+  </optVariables>
+</opt>
+</optimization-report>
+  QMC Execution time = 6.617 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root opt_emin_batched.s002
+=========================================================
+  Random walking without drift
+  Adding a default LocalEnergyEstimator for the MainEstimator 
+EstimatorManager setup for this section:
+  Main Estimator:  LocalEnergy
+
+=========================================================
+  Start VMCBatched
+  File Root opt_emin_batched.s002
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers :   55126 MiB
+Memory footprint by rank 0 on node 0       :      74 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 12
+             walkers_per_rank  = [4(x3)]
+             num_crowds        = 4
+  on rank 0, walkers_per_crowd = [1(x4)]
+
+VMCBatched Driver collecting samples, samples per rank = 17600
+                                      total samples    = 52800
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+WARNING Input tag "nonlocalpp" has been deprecated and will be deleted in the next release!
+WARNING Input tag "use_nonlocalpp_deriv" has been deprecated and will be deleted in the next release!
+WARNING 'nonlocalpp' no more affects any part of the execution. Please remove it from your input file.
+WARNING 'use_nonlocalpp_deriv' no more affects any part of the execution. Please remove it from your input file.
+ TrialWaveFunction "psi0" has 3 optimizable objects:
+   'eC' optimized
+   'uu' optimized
+   'ud' optimized
+ Variational subset selects 15 parameters.
+ In total 15 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+<optimization-report>
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers :   55126 MiB
+Memory footprint by rank 0 on node 0       :      74 MiB
+===================================================================
+Warm-up is completed!
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers :   55151 MiB
+Memory footprint by rank 0 on node 0       :      74 MiB
+=====================================================
+====================================================
+  End of a VMC block
+    QMC counter        = 2
+    time step          = 0.3
+    reference energy   = -10.4888
+    reference variance = 0.418586
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers :   55095 MiB
+Memory footprint by rank 0 on node 0       :      74 MiB
+=============================================
+  Carry over 12 walker configurations to the next QMC driver.
+  Execution time = 4.2822e+00
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot 
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -1.0489e+01
+  VMC Evar = 4.1871e-01
+  Total weights = 5.2800e+04
+  Execution time = 1.7183e+00
+  </log>
+</opt>
+<opt stage="main" walkers="52800">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 15 optimized parameters, largest LM parameter change : 1.8625e-02 at parameter 5
+Effective weight of all the samples measured by correlated sampling is 9.9987e-01
+
+******************************************************************************
+Init Cost =  -9.3980e+00    New Cost =  -9.3965e+00  Delta Cost =   1.4531e-03
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   1.5625e-02
+*****************************************************************************
+  Execution time = 6.6826e+00
+  </log>
+  <optVariables href="opt_emin_batched.s002.opt.xml">
+eC_0                -2.347824e-01 1 1  ON 0
+eC_1                -1.838966e-01 1 1  ON 1
+eC_2                -1.552546e-01 1 1  ON 2
+eC_3                -1.067777e-01 1 1  ON 3
+eC_4                -5.621499e-02 1 1  ON 4
+uu_0                 2.704441e-01 1 1  ON 5
+uu_1                 1.922201e-01 1 1  ON 6
+uu_2                 1.238429e-01 1 1  ON 7
+uu_3                 6.625400e-02 1 1  ON 8
+uu_4                 3.108831e-02 1 1  ON 9
+ud_0                 4.780241e-01 1 1  ON 10
+ud_1                 3.071807e-01 1 1  ON 11
+ud_2                 1.872488e-01 1 1  ON 12
+ud_3                 9.695408e-02 1 1  ON 13
+ud_4                 4.307070e-02 1 1  ON 14
+  </optVariables>
+</opt>
+</optimization-report>
+  QMC Execution time = 6.684 secs
+Loop execution max-interations = 6
+
+========================================
+  Reading WFOpt driver XML input section
+========================================
+  Random walking without drift
+  Adding a default LocalEnergyEstimator for the MainEstimator 
+EstimatorManager setup for this section:
+  Main Estimator:  LocalEnergy
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root opt_emin_batched.s003
+=========================================================
+  Random walking without drift
+  Adding a default LocalEnergyEstimator for the MainEstimator 
+EstimatorManager setup for this section:
+  Main Estimator:  LocalEnergy
+
+=========================================================
+  Start VMCBatched
+  File Root opt_emin_batched.s003
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers :   55112 MiB
+Memory footprint by rank 0 on node 0       :      75 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 12
+             walkers_per_rank  = [4(x3)]
+             num_crowds        = 4
+  on rank 0, walkers_per_crowd = [1(x4)]
+
+VMCBatched Driver collecting samples, samples per rank = 17600
+                                      total samples    = 52800
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+WARNING Input tag "nonlocalpp" has been deprecated and will be deleted in the next release!
+WARNING Input tag "use_nonlocalpp_deriv" has been deprecated and will be deleted in the next release!
+WARNING 'nonlocalpp' no more affects any part of the execution. Please remove it from your input file.
+WARNING 'use_nonlocalpp_deriv' no more affects any part of the execution. Please remove it from your input file.
+ TrialWaveFunction "psi0" has 3 optimizable objects:
+   'eC' optimized
+   'uu' optimized
+   'ud' optimized
+ Variational subset selects 15 parameters.
+ In total 15 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+<optimization-report>
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers :   55112 MiB
+Memory footprint by rank 0 on node 0       :      75 MiB
+===================================================================
+Warm-up is completed!
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers :   55114 MiB
+Memory footprint by rank 0 on node 0       :      75 MiB
+=====================================================
+====================================================
+  End of a VMC block
+    QMC counter        = 3
+    time step          = 0.3
+    reference energy   = -10.4887
+    reference variance = 0.459719
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers :   55143 MiB
+Memory footprint by rank 0 on node 0       :      75 MiB
+=============================================
+  Carry over 12 walker configurations to the next QMC driver.
+  Execution time = 4.2203e+00
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot 
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -1.0489e+01
+  VMC Evar = 4.5967e-01
+  Total weights = 5.2800e+04
+  Execution time = 1.6885e+00
+  </log>
+</opt>
+<opt stage="main" walkers="52800">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 15 optimized parameters, largest LM parameter change : 1.4423e-02 at parameter 5
+Effective weight of all the samples measured by correlated sampling is 9.9998e-01
+
+******************************************************************************
+Init Cost =  -9.3939e+00    New Cost =  -9.3941e+00  Delta Cost =  -2.7038e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   2.5000e-01
+*****************************************************************************
+  Execution time = 6.5946e+00
+  </log>
+  <optVariables href="opt_emin_batched.s003.opt.xml">
+eC_0                -2.368513e-01 1 1  ON 0
+eC_1                -1.840937e-01 1 1  ON 1
+eC_2                -1.543399e-01 1 1  ON 2
+eC_3                -1.054123e-01 1 1  ON 3
+eC_4                -5.485170e-02 1 1  ON 4
+uu_0                 2.848671e-01 1 1  ON 5
+uu_1                 1.925591e-01 1 1  ON 6
+uu_2                 1.254682e-01 1 1  ON 7
+uu_3                 6.717605e-02 1 1  ON 8
+uu_4                 3.167844e-02 1 1  ON 9
+ud_0                 4.749850e-01 1 1  ON 10
+ud_1                 3.056522e-01 1 1  ON 11
+ud_2                 1.866782e-01 1 1  ON 12
+ud_3                 9.701460e-02 1 1  ON 13
+ud_4                 4.316325e-02 1 1  ON 14
+  </optVariables>
+</opt>
+</optimization-report>
+  QMC Execution time = 6.595 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root opt_emin_batched.s004
+=========================================================
+  Random walking without drift
+  Adding a default LocalEnergyEstimator for the MainEstimator 
+EstimatorManager setup for this section:
+  Main Estimator:  LocalEnergy
+
+=========================================================
+  Start VMCBatched
+  File Root opt_emin_batched.s004
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers :   55136 MiB
+Memory footprint by rank 0 on node 0       :      76 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 12
+             walkers_per_rank  = [4(x3)]
+             num_crowds        = 4
+  on rank 0, walkers_per_crowd = [1(x4)]
+
+VMCBatched Driver collecting samples, samples per rank = 17600
+                                      total samples    = 52800
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+WARNING Input tag "nonlocalpp" has been deprecated and will be deleted in the next release!
+WARNING Input tag "use_nonlocalpp_deriv" has been deprecated and will be deleted in the next release!
+WARNING 'nonlocalpp' no more affects any part of the execution. Please remove it from your input file.
+WARNING 'use_nonlocalpp_deriv' no more affects any part of the execution. Please remove it from your input file.
+ TrialWaveFunction "psi0" has 3 optimizable objects:
+   'eC' optimized
+   'uu' optimized
+   'ud' optimized
+ Variational subset selects 15 parameters.
+ In total 15 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+<optimization-report>
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers :   55136 MiB
+Memory footprint by rank 0 on node 0       :      76 MiB
+===================================================================
+Warm-up is completed!
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers :   55136 MiB
+Memory footprint by rank 0 on node 0       :      76 MiB
+=====================================================
+====================================================
+  End of a VMC block
+    QMC counter        = 4
+    time step          = 0.3
+    reference energy   = -10.4911
+    reference variance = 0.437531
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers :   55170 MiB
+Memory footprint by rank 0 on node 0       :      76 MiB
+=============================================
+  Carry over 12 walker configurations to the next QMC driver.
+  Execution time = 4.2490e+00
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot 
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -1.0491e+01
+  VMC Evar = 4.3754e-01
+  Total weights = 5.2800e+04
+  Execution time = 1.7248e+00
+  </log>
+</opt>
+<opt stage="main" walkers="52800">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 15 optimized parameters, largest LM parameter change : 5.6929e+01 at parameter 5
+Effective weight of all the samples measured by correlated sampling is 2.7743e-05
+WARNING     Smaller than the user specified threshold "minwalkers" = 5.0000e-01
+  If this message appears frequently. You might have to be cautious. 
+  Find info about parameter "minwalkers" in the user manual!
+
+******************************************************************************
+Init Cost =  -9.3983e+00    New Cost =   2.6234e+03  Delta Cost =   2.6328e+03
+******************************************************************************
+
+The new set of parameters is not valid. Revert to the old set!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   1.0000e+00
+*****************************************************************************
+  Execution time = 6.7439e+00
+  </log>
+  <optVariables href="opt_emin_batched.s004.opt.xml">
+eC_0                -2.368513e-01 1 1  ON 0
+eC_1                -1.840937e-01 1 1  ON 1
+eC_2                -1.543399e-01 1 1  ON 2
+eC_3                -1.054123e-01 1 1  ON 3
+eC_4                -5.485170e-02 1 1  ON 4
+uu_0                 2.848671e-01 1 1  ON 5
+uu_1                 1.925591e-01 1 1  ON 6
+uu_2                 1.254682e-01 1 1  ON 7
+uu_3                 6.717605e-02 1 1  ON 8
+uu_4                 3.167844e-02 1 1  ON 9
+ud_0                 4.749850e-01 1 1  ON 10
+ud_1                 3.056522e-01 1 1  ON 11
+ud_2                 1.866782e-01 1 1  ON 12
+ud_3                 9.701460e-02 1 1  ON 13
+ud_4                 4.316325e-02 1 1  ON 14
+  </optVariables>
+</opt>
+</optimization-report>
+  QMC Execution time = 6.745 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root opt_emin_batched.s005
+=========================================================
+  Random walking without drift
+  Adding a default LocalEnergyEstimator for the MainEstimator 
+EstimatorManager setup for this section:
+  Main Estimator:  LocalEnergy
+
+=========================================================
+  Start VMCBatched
+  File Root opt_emin_batched.s005
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers :   55170 MiB
+Memory footprint by rank 0 on node 0       :      76 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 12
+             walkers_per_rank  = [4(x3)]
+             num_crowds        = 4
+  on rank 0, walkers_per_crowd = [1(x4)]
+
+VMCBatched Driver collecting samples, samples per rank = 17600
+                                      total samples    = 52800
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+WARNING Input tag "nonlocalpp" has been deprecated and will be deleted in the next release!
+WARNING Input tag "use_nonlocalpp_deriv" has been deprecated and will be deleted in the next release!
+WARNING 'nonlocalpp' no more affects any part of the execution. Please remove it from your input file.
+WARNING 'use_nonlocalpp_deriv' no more affects any part of the execution. Please remove it from your input file.
+ TrialWaveFunction "psi0" has 3 optimizable objects:
+   'eC' optimized
+   'uu' optimized
+   'ud' optimized
+ Variational subset selects 15 parameters.
+ In total 15 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+<optimization-report>
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers :   55170 MiB
+Memory footprint by rank 0 on node 0       :      76 MiB
+===================================================================
+Warm-up is completed!
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers :   55170 MiB
+Memory footprint by rank 0 on node 0       :      76 MiB
+=====================================================
+====================================================
+  End of a VMC block
+    QMC counter        = 5
+    time step          = 0.3
+    reference energy   = -10.4887
+    reference variance = 0.432307
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers :   55145 MiB
+Memory footprint by rank 0 on node 0       :      76 MiB
+=============================================
+  Carry over 12 walker configurations to the next QMC driver.
+  Execution time = 4.8253e+00
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot 
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -1.0489e+01
+  VMC Evar = 4.3227e-01
+  Total weights = 5.2800e+04
+  Execution time = 1.8122e+00
+  </log>
+</opt>
+<opt stage="main" walkers="52800">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 15 optimized parameters, largest LM parameter change : 6.9820e-03 at parameter 0
+Effective weight of all the samples measured by correlated sampling is 9.9998e-01
+
+******************************************************************************
+Init Cost =  -9.3966e+00    New Cost =  -9.3969e+00  Delta Cost =  -2.3079e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   2.5000e-01
+*****************************************************************************
+  Execution time = 7.3977e+00
+  </log>
+  <optVariables href="opt_emin_batched.s005.opt.xml">
+eC_0                -2.298694e-01 1 1  ON 0
+eC_1                -1.801880e-01 1 1  ON 1
+eC_2                -1.519732e-01 1 1  ON 2
+eC_3                -1.034916e-01 1 1  ON 3
+eC_4                -5.398797e-02 1 1  ON 4
+uu_0                 2.863054e-01 1 1  ON 5
+uu_1                 1.919881e-01 1 1  ON 6
+uu_2                 1.249862e-01 1 1  ON 7
+uu_3                 6.669746e-02 1 1  ON 8
+uu_4                 3.153954e-02 1 1  ON 9
+ud_0                 4.772491e-01 1 1  ON 10
+ud_1                 3.062754e-01 1 1  ON 11
+ud_2                 1.858653e-01 1 1  ON 12
+ud_3                 9.624883e-02 1 1  ON 13
+ud_4                 4.301208e-02 1 1  ON 14
+  </optVariables>
+</opt>
+</optimization-report>
+  QMC Execution time = 7.398 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root opt_emin_batched.s006
+=========================================================
+  Random walking without drift
+  Adding a default LocalEnergyEstimator for the MainEstimator 
+EstimatorManager setup for this section:
+  Main Estimator:  LocalEnergy
+
+=========================================================
+  Start VMCBatched
+  File Root opt_emin_batched.s006
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers :   55146 MiB
+Memory footprint by rank 0 on node 0       :      77 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 12
+             walkers_per_rank  = [4(x3)]
+             num_crowds        = 4
+  on rank 0, walkers_per_crowd = [1(x4)]
+
+VMCBatched Driver collecting samples, samples per rank = 17600
+                                      total samples    = 52800
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+WARNING Input tag "nonlocalpp" has been deprecated and will be deleted in the next release!
+WARNING Input tag "use_nonlocalpp_deriv" has been deprecated and will be deleted in the next release!
+WARNING 'nonlocalpp' no more affects any part of the execution. Please remove it from your input file.
+WARNING 'use_nonlocalpp_deriv' no more affects any part of the execution. Please remove it from your input file.
+ TrialWaveFunction "psi0" has 3 optimizable objects:
+   'eC' optimized
+   'uu' optimized
+   'ud' optimized
+ Variational subset selects 15 parameters.
+ In total 15 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+<optimization-report>
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers :   55146 MiB
+Memory footprint by rank 0 on node 0       :      77 MiB
+===================================================================
+Warm-up is completed!
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers :   55146 MiB
+Memory footprint by rank 0 on node 0       :      77 MiB
+=====================================================
+====================================================
+  End of a VMC block
+    QMC counter        = 6
+    time step          = 0.3
+    reference energy   = -10.4871
+    reference variance = 0.447658
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers :   55105 MiB
+Memory footprint by rank 0 on node 0       :      77 MiB
+=============================================
+  Carry over 12 walker configurations to the next QMC driver.
+  Execution time = 4.8407e+00
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot 
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -1.0487e+01
+  VMC Evar = 4.4766e-01
+  Total weights = 5.2800e+04
+  Execution time = 1.8421e+00
+  </log>
+</opt>
+<opt stage="main" walkers="52800">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 15 optimized parameters, largest LM parameter change : 1.8223e-03 at parameter 6
+Effective weight of all the samples measured by correlated sampling is 1.0000e+00
+
+******************************************************************************
+Init Cost =  -9.3937e+00    New Cost =  -9.3940e+00  Delta Cost =  -3.8192e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   6.2500e-02
+*****************************************************************************
+  Execution time = 7.4439e+00
+  </log>
+  <optVariables href="opt_emin_batched.s006.opt.xml">
+eC_0                -2.314463e-01 1 1  ON 0
+eC_1                -1.811097e-01 1 1  ON 1
+eC_2                -1.521099e-01 1 1  ON 2
+eC_3                -1.036936e-01 1 1  ON 3
+eC_4                -5.340839e-02 1 1  ON 4
+uu_0                 2.858074e-01 1 1  ON 5
+uu_1                 1.938104e-01 1 1  ON 6
+uu_2                 1.252994e-01 1 1  ON 7
+uu_3                 6.712382e-02 1 1  ON 8
+uu_4                 3.138249e-02 1 1  ON 9
+ud_0                 4.767160e-01 1 1  ON 10
+ud_1                 3.060095e-01 1 1  ON 11
+ud_2                 1.859315e-01 1 1  ON 12
+ud_3                 9.628884e-02 1 1  ON 13
+ud_4                 4.283650e-02 1 1  ON 14
+  </optVariables>
+</opt>
+</optimization-report>
+  QMC Execution time = 7.445 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root opt_emin_batched.s007
+=========================================================
+  Random walking without drift
+  Adding a default LocalEnergyEstimator for the MainEstimator 
+EstimatorManager setup for this section:
+  Main Estimator:  LocalEnergy
+
+=========================================================
+  Start VMCBatched
+  File Root opt_emin_batched.s007
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers :   55121 MiB
+Memory footprint by rank 0 on node 0       :      77 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 12
+             walkers_per_rank  = [4(x3)]
+             num_crowds        = 4
+  on rank 0, walkers_per_crowd = [1(x4)]
+
+VMCBatched Driver collecting samples, samples per rank = 17600
+                                      total samples    = 52800
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+WARNING Input tag "nonlocalpp" has been deprecated and will be deleted in the next release!
+WARNING Input tag "use_nonlocalpp_deriv" has been deprecated and will be deleted in the next release!
+WARNING 'nonlocalpp' no more affects any part of the execution. Please remove it from your input file.
+WARNING 'use_nonlocalpp_deriv' no more affects any part of the execution. Please remove it from your input file.
+ TrialWaveFunction "psi0" has 3 optimizable objects:
+   'eC' optimized
+   'uu' optimized
+   'ud' optimized
+ Variational subset selects 15 parameters.
+ In total 15 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+<optimization-report>
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers :   55121 MiB
+Memory footprint by rank 0 on node 0       :      77 MiB
+===================================================================
+Warm-up is completed!
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers :   55121 MiB
+Memory footprint by rank 0 on node 0       :      77 MiB
+=====================================================
+====================================================
+  End of a VMC block
+    QMC counter        = 7
+    time step          = 0.3
+    reference energy   = -10.4881
+    reference variance = 0.447986
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers :   55126 MiB
+Memory footprint by rank 0 on node 0       :      77 MiB
+=============================================
+  Carry over 12 walker configurations to the next QMC driver.
+  Execution time = 4.7970e+00
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot 
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -1.0488e+01
+  VMC Evar = 4.4799e-01
+  Total weights = 5.2800e+04
+  Execution time = 1.9254e+00
+  </log>
+</opt>
+<opt stage="main" walkers="52800">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 15 optimized parameters, largest LM parameter change : 5.3341e-03 at parameter 5
+Effective weight of all the samples measured by correlated sampling is 9.9997e-01
+
+******************************************************************************
+Init Cost =  -9.3945e+00    New Cost =  -9.3944e+00  Delta Cost =   1.3074e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   1.5625e-02
+*****************************************************************************
+  Execution time = 7.5165e+00
+  </log>
+  <optVariables href="opt_emin_batched.s007.opt.xml">
+eC_0                -2.355913e-01 1 1  ON 0
+eC_1                -1.851509e-01 1 1  ON 1
+eC_2                -1.547823e-01 1 1  ON 2
+eC_3                -1.062821e-01 1 1  ON 3
+eC_4                -5.470908e-02 1 1  ON 4
+uu_0                 2.804733e-01 1 1  ON 5
+uu_1                 1.936157e-01 1 1  ON 6
+uu_2                 1.249928e-01 1 1  ON 7
+uu_3                 6.666587e-02 1 1  ON 8
+uu_4                 3.116758e-02 1 1  ON 9
+ud_0                 4.760195e-01 1 1  ON 10
+ud_1                 3.062345e-01 1 1  ON 11
+ud_2                 1.857383e-01 1 1  ON 12
+ud_3                 9.614232e-02 1 1  ON 13
+ud_4                 4.297524e-02 1 1  ON 14
+  </optVariables>
+</opt>
+</optimization-report>
+  QMC Execution time = 7.517 secs
+
+=========================================================
+  Start QMCLinearOptimizeBatched
+  File Root opt_emin_batched.s008
+=========================================================
+  Random walking without drift
+  Adding a default LocalEnergyEstimator for the MainEstimator 
+EstimatorManager setup for this section:
+  Main Estimator:  LocalEnergy
+
+=========================================================
+  Start VMCBatched
+  File Root opt_emin_batched.s008
+=========================================================
+==============================================================
+--- Memory usage report : VMCBatched before initialization ---
+==============================================================
+Available memory on node 0, free + buffers :   55106 MiB
+Memory footprint by rank 0 on node 0       :      77 MiB
+==============================================================
+VMCBatched Driver running with
+             total_walkers     = 12
+             walkers_per_rank  = [4(x3)]
+             num_crowds        = 4
+  on rank 0, walkers_per_crowd = [1(x4)]
+
+VMCBatched Driver collecting samples, samples per rank = 17600
+                                      total samples    = 52800
+ Using QMCCostFunctionBatched::QMCCostFunctionBatched
+WARNING Input tag "nonlocalpp" has been deprecated and will be deleted in the next release!
+WARNING Input tag "use_nonlocalpp_deriv" has been deprecated and will be deleted in the next release!
+WARNING 'nonlocalpp' no more affects any part of the execution. Please remove it from your input file.
+WARNING 'use_nonlocalpp_deriv' no more affects any part of the execution. Please remove it from your input file.
+ TrialWaveFunction "psi0" has 3 optimizable objects:
+   'eC' optimized
+   'uu' optimized
+   'ud' optimized
+ Variational subset selects 15 parameters.
+ In total 15 parameters being optimized after applying constraints.
+ Using Default Cost Function: Cost = <|E-E_ff|^2>
+<optimization-report>
+===================================================================
+--- Memory usage report : VMCBatched after initialLogEvaluation ---
+===================================================================
+Available memory on node 0, free + buffers :   55106 MiB
+Memory footprint by rank 0 on node 0       :      77 MiB
+===================================================================
+Warm-up is completed!
+=====================================================
+--- Memory usage report : VMCBatched after Warmup ---
+=====================================================
+Available memory on node 0, free + buffers :   55104 MiB
+Memory footprint by rank 0 on node 0       :      77 MiB
+=====================================================
+====================================================
+  End of a VMC block
+    QMC counter        = 8
+    time step          = 0.3
+    reference energy   = -10.4935
+    reference variance = 0.442505
+====================================================
+=============================================
+--- Memory usage report : VMCBatched ends ---
+=============================================
+Available memory on node 0, free + buffers :   55125 MiB
+Memory footprint by rank 0 on node 0       :      77 MiB
+=============================================
+  Carry over 12 walker configurations to the next QMC driver.
+  Execution time = 4.8729e+00
+</vmc>
+<opt stage="setup">
+  <log>
+   Reading configurations from h5FileRoot 
+ Found 2 wavefunction dependent components in the Hamiltonian 'Kinetic' 'NonLocalECP'.
+  VMC Eavg = -1.0494e+01
+  VMC Evar = 4.4251e-01
+  Total weights = 5.2800e+04
+  Execution time = 1.8513e+00
+  </log>
+</opt>
+<opt stage="main" walkers="52800">
+  <log>
+
+*****************************************
+Building overlap and Hamiltonian matrices
+*****************************************
+
+Among totally 15 optimized parameters, largest LM parameter change : 6.1339e-03 at parameter 5
+Effective weight of all the samples measured by correlated sampling is 9.9998e-01
+
+******************************************************************************
+Init Cost =  -9.3999e+00    New Cost =  -9.4006e+00  Delta Cost =  -6.1358e-04
+******************************************************************************
+
+The new set of parameters is valid. Updating the trial wave function!
+
+*****************************************************************************
+Applying the update for shift_i =   1.0000e-02     and shift_s =   3.9062e-03
+*****************************************************************************
+  Execution time = 7.4903e+00
+  </log>
+  <optVariables href="opt_emin_batched.s008.opt.xml">
+eC_0                -2.357734e-01 1 1  ON 0
+eC_1                -1.830532e-01 1 1  ON 1
+eC_2                -1.532531e-01 1 1  ON 2
+eC_3                -1.042164e-01 1 1  ON 3
+eC_4                -5.355154e-02 1 1  ON 4
+uu_0                 2.866072e-01 1 1  ON 5
+uu_1                 1.895044e-01 1 1  ON 6
+uu_2                 1.237488e-01 1 1  ON 7
+uu_3                 6.554525e-02 1 1  ON 8
+uu_4                 3.060538e-02 1 1  ON 9
+ud_0                 4.738834e-01 1 1  ON 10
+ud_1                 3.051849e-01 1 1  ON 11
+ud_2                 1.860605e-01 1 1  ON 12
+ud_3                 9.676486e-02 1 1  ON 13
+ud_4                 4.289791e-02 1 1  ON 14
+  </optVariables>
+</opt>
+</optimization-report>
+  QMC Execution time = 7.492 secs
+  Total Execution time = 62.72 secs
+
+=========================================================
+  A new xml input file : opt_emin_batched.s008.cont.xml
+
+Use --enable-timers=<value> command line option to increase or decrease level of timing information
+Stack timer profile
+Timer                       Inclusive_time  Exclusive_time  Calls       Time_per_call
+Total                         62.9389     0.0002              1      62.938878845
+  QMCLinearOptimizeBatched    62.7192     0.0062              2      31.359613406
+    VMCBatched                62.7130    62.7130              9       6.968115318
+  Startup                      0.2195     0.2195              1       0.219453326
+
+QMCPACK execution completed successfully

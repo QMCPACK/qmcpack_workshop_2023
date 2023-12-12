@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<simulation>
+   <project id="vmc_batched" series="1">
+      <parameter name="driver_version">    batched         </parameter>
+      <application name="qmcpack" role="molecu" class="serial" version="1.0"/>
+   <host>LAP0132821</host><date>Fri Dec  8 12:04:18 2023
+</date></project>
+   <qmcsystem>
+      <simulationcell>
+         <parameter name="lattice" units="bohr">
+                  3.37316115        3.37316115        0.00000000
+                  0.00000000        3.37316115        3.37316115
+                  3.37316115        0.00000000        3.37316115
+         </parameter>
+         <parameter name="bconds">
+            p p p
+         </parameter>
+         <parameter name="LR_dim_cutoff">    15                 </parameter>
+      </simulationcell>
+      <particleset name="e" random="yes" randomsrc="ion0">
+         <group name="u" size="4" mass="1.0">
+            <parameter name="charge">    -1                    </parameter>
+            <parameter name="mass">    1.0                   </parameter>
+         </group>
+         <group name="d" size="4" mass="1.0">
+            <parameter name="charge">    -1                    </parameter>
+            <parameter name="mass">    1.0                   </parameter>
+         </group>
+      </particleset>
+      <particleset name="ion0">
+         <group name="C" size="2" mass="21894.71359057295">
+            <parameter name="charge">    4                     </parameter>
+            <parameter name="valence">    4                     </parameter>
+            <parameter name="atomicnumber">    6                     </parameter>
+            <parameter name="mass">    21894.71359057295            </parameter>
+            <attrib name="position" datatype="posArray" condition="0">
+                     0.00000000        0.00000000        0.00000000
+                     1.68658058        1.68658058        1.68658058
+            </attrib>
+         </group>
+      </particleset>
+      <wavefunction name="psi0" target="e">
+         <sposet_builder type="bspline" href="../diamond.orbitals.h5" tilematrix="1 0 0 0 1 0 0 0 1" twistnum="0" source="ion0" version="0.10" meshfactor="1.0" precision="float" truncate="no">
+            <sposet type="bspline" name="spo_ud" size="4" spindataset="0"/>
+         </sposet_builder>
+         <determinantset>
+            <slaterdeterminant>
+               <determinant id="updet" group="u" sposet="spo_ud" size="4"/>
+               <determinant id="downdet" group="d" sposet="spo_ud" size="4"/>
+            </slaterdeterminant>
+         </determinantset>
+         <jastrow type="One-Body" name="J1" function="bspline" source="ion0" print="yes">
+            <correlation elementType="C" size="5" rcut="2.385185123200013" cusp="0.0">
+               <coefficients id="eC" type="Array">                  
+-0.2102462269 -0.1585937311 -0.1331248169 -0.09027557351 -0.04681673723 
+               </coefficients>
+            </correlation>
+         </jastrow>
+         <jastrow type="Two-Body" name="J2" function="bspline" print="yes">
+            <correlation speciesA="u" speciesB="u" size="5" rcut="2.385185123200013">
+               <coefficients id="uu" type="Array">                  
+0.2270240954 0.1527007447 0.09884745172 0.05326872436 0.02501205244
+               </coefficients>
+            </correlation>
+            <correlation speciesA="u" speciesB="d" size="5" rcut="2.385185123200013">
+               <coefficients id="ud" type="Array">                  
+0.3842085387 0.2585946933 0.1592793492 0.08313450089 0.03723333517
+               </coefficients>
+            </correlation>
+         </jastrow>
+      </wavefunction>
+      <hamiltonian name="h0" type="generic" target="e">
+         <pairpot type="coulomb" name="ElecElec" source="e" target="e"/>
+         <pairpot type="coulomb" name="IonIon" source="ion0" target="ion0"/>
+         <pairpot type="pseudo" name="PseudoPot" source="ion0" wavefunction="psi0" format="xml">
+            <pseudo elementType="C" href="C.BFD.xml"/>
+         </pairpot>
+      </hamiltonian>
+   </qmcsystem><mcwalkerset fileroot="vmc_batched.s000" node="-1" nprocs="3" version="3 17" collected="yes"/>
+   <qmc method="vmc" move="pbyp">
+      <parameter name="warmupSteps">    50              </parameter>
+      <parameter name="blocks">    800             </parameter>
+      <parameter name="steps">    10              </parameter>
+      <parameter name="subSteps">    3               </parameter>
+      <parameter name="timestep">    0.3             </parameter>
+      <parameter name="useDrift">    yes             </parameter>
+   </qmc>
+</simulation>
