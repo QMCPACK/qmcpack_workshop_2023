@@ -15,15 +15,15 @@ Recordings of the presentations will be uploaded on the [QMCPACK YouTube channel
 * "TBD", Fernando Reboredo (ORNL).
 * "QMCPACK force calculations for effective potentials of dense hydrogen", David Ceperley (UIUC).
 * "Towards QMCPACK v4.0", Paul Kent (ORNL). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/Kent_Towards_QMCPACK_v4_vfinal.pdf)
-* "Driving the batched code with NEXUS", Jaron Krogel (ORNL).
+* "Driving the batched code with NEXUS", Jaron Krogel (ORNL). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/Krogel_Batched_QMCPACK_Nexus.pdf)
 * "CPU and GPU performance of the batched code", Ye Luo (ANL). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/Luo_GPU_performance.pdf)
 
 ## Day 2 Presentations
 
-* "Accurate Electronic and Magnetic Properties of 2D Materials Using Quantum Monte Carlo Methods", Daniel Wines (NIST).
+* "Accurate Electronic and Magnetic Properties of 2D Materials Using Quantum Monte Carlo Methods", Daniel Wines (NIST). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/Wines_2D_Materials_QMC.pdf)
 * "Spin Orbit Coupling in QMCPACK", Cody Melon (SNL).   
-* "Development of new correlation-consistent effective core potentials", Benjamin Kincade (NCSU).
-* "Orbital Optimization", Joshua Townsend and Amanda Dumi (SNL).
+* "Development of new correlation-consistent effective core potentials", Benjamin Kincade (NCSU). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/Kincaid_ccECP_talk.pdf)
+* "Orbital Optimization", Joshua Townsend and Amanda Dumi (SNL). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/orbopt_tutorial.pdf)
 * "Use of the surrogate Hessian method for geometry optimization", Jaron Krogel (ORNL).
 * "Fermi surface calculation with QMCPACK", Jaron Krogel (ORNL).
 
