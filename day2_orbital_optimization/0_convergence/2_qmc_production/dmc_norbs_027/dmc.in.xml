@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<simulation>
+  <project id="opt" series="0">
+    <parameter name="driver_version"      > batched </parameter>   <!-- Using batched driver -->
+    <application name="qmcpack" role="molecu" class="serial" version="1.0"/>
+  </project>
+  <qmcsystem>
+    <simulationcell>
+      <parameter name="bconds">
+        n n n
+      </parameter>
+    </simulationcell>
+    <particleset name="ion0" size="2">
+      <attrib name="ionid" datatype="stringArray">
+        C C
+      </attrib>
+      <attrib name="position" datatype="posArray" condition="0">
+        0.00000000        0.00000000        0.00000000
+        0.00000000        0.00000000        2.34892957
+      </attrib>
+      <group name="C">
+        <parameter name="charge"              >    4                     </parameter>
+        <parameter name="valence"             >    4                     </parameter>
+        <parameter name="atomicnumber"        >    6                     </parameter>
+      </group>
+    </particleset>
+    <particleset name="e" random="yes" randomsrc="ion0">
+      <group name="u" size="4">
+        <parameter name="charge"              >    -1                    </parameter>
+      </group>
+      <group name="d" size="4">
+        <parameter name="charge"              >    -1                    </parameter>
+      </group>
+    </particleset>
+    <wavefunction name="psi0" target="e">
+      <sposet_collection type="MolecularOrbital" href="c4q.orbs.h5" source="ion0">
+        <basisset name="LCAOBSet" id="atomicBasisSet0" keyword="GTO" transform="no">
+        </basisset>
+        <rotated_sposet name="rot_spo_up" method="global">
+          <sposet name="spo_up" basisset="LCAOBSet" size="27">
+            <coefficient spindataset="0"> </coefficient>
+          </sposet>
+        </rotated_sposet>
+        <rotated_sposet name="rot_spo_down" method="global">
+          <sposet name="spo_down" basisset="LCAOBSet" size="27">
+            <coefficient spindataset="0"> </coefficient>
+          </sposet>
+        </rotated_sposet>
+      </sposet_collection>
+      <determinantset key="GTO" source="ion0" transform="no" type="MO">
+        <slaterdeterminant>
+          <determinant id="rot_spo_up">
+          </determinant>
+          <determinant id="rot_spo_down">
+          </determinant>
+        </slaterdeterminant>
+      </determinantset>
+      <jastrow type="One-Body" name="J1" function="bspline" source="ion0" print="yes">
+        <correlation elementType="C" size="14" rcut="7.0" cusp="0.0">
+          <coefficients id="eC" type="Array" optimize="yes"> -1.15697447 -1.171632 -1.079657064 -0.8949858631 -0.670841523 -0.4678494863 -0.2940576124 -0.1374077457 -0.03785323762 0.05630600911 0.122977361 0.1625419636 0.1533640465 0.1277575721</coefficients>
+        </correlation>
+      </jastrow>
+      <jastrow type="Two-Body" name="J2" function="bspline" print="yes">
+        <correlation speciesA="u" speciesB="u" size="14" rcut="7.0">
+          <coefficients id="uu" type="Array" optimize="yes"> 0.4074973486 0.3205908369 0.2451256804 0.1815957278 0.1275556202 0.08110817502 0.04025783715 0.005298496225 -0.02363276075 -0.04692526618 -0.0636125362 -0.07343133081 -0.07005340237 -0.06054909019</coefficients>
+        </correlation>
+        <correlation speciesA="u" speciesB="d" size="14" rcut="7.0">
+          <coefficients id="ud" type="Array" optimize="yes"> 0.9753515013 0.7635581672 0.6023319598 0.4735188714 0.3749816602 0.3010665805 0.24472038 0.1992334652 0.161046192 0.1269914228 0.09513506807 0.06637192901 0.04061800537 0.02133362144</coefficients>
+        </correlation>
+      </jastrow>
+      <jastrow name="J3" type="eeI" function="polynomial" source="ion0" print="yes">
+        <correlation ispecies="C" especies="u" isize="3" esize="3" rcut="7.0">
+          <coefficients id="uuC" type="Array" optimize="yes"> 3.366564731e-05 0.000168800745 0.000350013463 -0.0001352529527 -8.357063151e-05 3.659662722e-05 0.0003039895246 4.091880181e-05 0.0004136384159 -0.0002984130645 -1.505174386e-05 -0.000552400101 -4.725162599e-05 8.292263978e-05 -7.109989748e-06 8.51563383e-06 0.0009738531824 -0.0005209279539 0.0006992170458 -0.0001000440607 -0.0002918674549 -4.698886072e-05 1.359252069e-05 0.0001036288154 -1.240528314e-05 7.100944754e-07</coefficients>
+        </correlation>
+        <correlation ispecies="C" especies1="u" especies2="d" isize="3" esize="3" rcut="7.0">
+          <coefficients id="udC" type="Array" optimize="yes"> -0.0005245734034 0.0003355947149 0.001232300568 0.0002950744798 -0.0001017924646 -1.921397116e-05 0.00149945252 -0.0001201535648 0.0006533628496 -0.0005836582504 0.0003548972541 -0.000940464377 -6.555165503e-05 -0.0005438229923 -0.000113899681 2.492872899e-05 0.001522836127 -0.001552208372 0.001191983337 -0.0001196644519 -0.0001583745811 -8.343769241e-05 1.348383992e-05 6.747053832e-05 -1.487619767e-06 -8.660394181e-07</coefficients>
+        </correlation>
+      </jastrow> 
+      <override_variational_parameters href="opt.s099.vp.h5"/>
+    </wavefunction>
+    <hamiltonian name="h0" type="generic" target="e">
+      <pairpot type="coulomb" name="ElecElec" source="e" target="e"/>
+      <pairpot type="coulomb" name="IonIon" source="ion0" target="ion0"/>
+      <pairpot type="pseudo" name="PseudoPot" source="ion0" wavefunction="psi0" format="xml">
+        <pseudo elementType="C" href="C.ccECP.xml"/>
+      </pairpot>
+    </hamiltonian>
+  </qmcsystem>
+
+  <!-- Initial VMC -->
+  <qmc method="vmc" move="pbyp" checkpoint="0">
+    <parameter name="walkers_per_rank"    >  64            </parameter>
+    <parameter name="warmupSteps"         >  10            </parameter>
+    <parameter name="blocks"              >  1000          </parameter>
+    <parameter name="steps"               >  5             </parameter>
+    <parameter name="subSteps"            >  4             </parameter>
+    <parameter name="timestep"            >  0.3           </parameter>
+    <parameter name="useDrift"            >  no            </parameter>    
+  </qmc>
+
+  <!-- DMC burn-in -->
+  <qmc method="dmc" move="pbyp" checkpoint="0">
+    <parameter name="walkers_per_rank"    >  64            </parameter>
+    <parameter name="warmupSteps"         >  10            </parameter>
+    <parameter name="blocks"              >  100           </parameter>
+    <parameter name="steps"               >  10            </parameter>
+    <parameter name="timestep"            >  0.1           </parameter>
+    <parameter name="nonlocalmoves"       >  v3            </parameter>
+  </qmc>
+
+  <!-- Production DMC -->
+  <qmc method="dmc" move="pbyp" checkpoint="0">
+    <parameter name="walkers_per_rank"    >  1024          </parameter>
+    <parameter name="warmupSteps"         >  10            </parameter>
+    <parameter name="blocks"              >  1000          </parameter>
+    <parameter name="steps"               >  10            </parameter>
+    <parameter name="timestep"            >  0.016         </parameter>
+    <parameter name="nonlocalmoves"       >  v3            </parameter>
+  </qmc>
+  <qmc method="dmc" move="pbyp" checkpoint="0">
+    <parameter name="walkers_per_rank"    >  1024          </parameter>
+    <parameter name="warmupSteps"         >  10            </parameter>
+    <parameter name="blocks"              >  1000          </parameter>
+    <parameter name="steps"               >  20            </parameter>
+    <parameter name="timestep"            >  0.008         </parameter>
+    <parameter name="nonlocalmoves"       >  v3            </parameter>
+  </qmc>
+  <qmc method="dmc" move="pbyp" checkpoint="0">
+    <parameter name="walkers_per_rank"    >  1024          </parameter>
+    <parameter name="warmupSteps"         >  10            </parameter>
+    <parameter name="blocks"              >  1000          </parameter>
+    <parameter name="steps"               >  40            </parameter>
+    <parameter name="timestep"            >  0.004         </parameter>
+    <parameter name="nonlocalmoves"       >  v3            </parameter>
+  </qmc>
+  <qmc method="dmc" move="pbyp" checkpoint="0">
+    <parameter name="walkers_per_rank"    >  1024          </parameter>
+    <parameter name="warmupSteps"         >  10            </parameter>
+    <parameter name="blocks"              >  1000          </parameter>
+    <parameter name="steps"               >  80            </parameter>
+    <parameter name="timestep"            >  0.002         </parameter>
+    <parameter name="nonlocalmoves"       >  v3            </parameter>
+  </qmc>
+
+</simulation>
