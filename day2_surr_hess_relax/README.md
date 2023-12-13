@@ -22,18 +22,23 @@ noise to represent DMC.
 * Standard Python libraries needed: numpy, dill, scipy, matplotlib
 
   pip3 install numpy
+
   pip3 install dill
+
   pip3 install scipy
+
   pip3 install matplotlib
 
 * Nexus
 
   git clone https://github.com/QMCPACK/qmcpack.git
+
   export PYTHONPATH=/your/path/to/qmcpack/nexus/lib/:$PYTHONPATH
   
 * Surrogate Hessian Relax
 
   git clone https://github.com/QMCPACK/surrogate_hessian_relax.git
+
   export PYTHONPATH=/your/path/to/surrogate_hessian_relax:$PYTHONPATH
 
 
