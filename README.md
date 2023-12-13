@@ -16,7 +16,7 @@ Recordings of the presentations will be uploaded on the [QMCPACK YouTube channel
 * "QMCPACK force calculations for effective potentials of dense hydrogen", David Ceperley (UIUC).
 * "Towards QMCPACK v4.0", Paul Kent (ORNL). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/Kent_Towards_QMCPACK_v4_vfinal.pdf)
 * "Driving the batched code with NEXUS", Jaron Krogel (ORNL).
-* "CPU and GPU performance of the batched code", Ye Luo (ANL).
+* "CPU and GPU performance of the batched code", Ye Luo (ANL). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/Luo_GPU_performance.pdf)
 
 ## Day 2 Presentations
 
