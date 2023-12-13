@@ -14,7 +14,7 @@ if [[ ! -e "C.ccECP.xml" ]]; then
     ln -s "../../../C.ccECP.xml" .
 fi
 if [[ ! -e "c4q.orbs.h5" ]]; then
-    ln -s "../../0_orbital_generation/wfn/c4q.orbs.h5" .
+    ln -s "../../0_orbital_generation/blessed_output/c4q.orbs.h5" .
 fi
 if [[ ! -e "opt.s048.vp.h5" ]]; then
     ln -s "../../1_qmc_opt/norbs_027/opt.s048.vp.h5" .

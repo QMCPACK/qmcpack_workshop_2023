@@ -37,12 +37,12 @@
         <basisset name="LCAOBSet" id="atomicBasisSet0" keyword="GTO" transform="no">
         </basisset>
         <rotated_sposet name="rot_spo_up" method="global">
-          <sposet name="spo_up" basisset="LCAOBSet" size="100">
+          <sposet name="spo_up" basisset="LCAOBSet" size="108">
             <coefficient spindataset="0"> </coefficient>
           </sposet>
         </rotated_sposet>
         <rotated_sposet name="rot_spo_down" method="global">
-          <sposet name="spo_down" basisset="LCAOBSet" size="100">
+          <sposet name="spo_down" basisset="LCAOBSet" size="108">
             <coefficient spindataset="0"> </coefficient>
           </sposet>
         </rotated_sposet>
@@ -57,25 +57,26 @@
       </determinantset>
       <jastrow type="One-Body" name="J1" function="bspline" source="ion0" print="yes">
         <correlation elementType="C" size="14" rcut="7.0" cusp="0.0">
-          <coefficients id="eC" type="Array" optimize="no"> -1.110459627 -1.051042576 -0.9396459207 -0.7922290008 -0.6239864695 -0.4577200838 -0.3022678126 -0.1628098986 -0.04697458585 0.04769528091 0.1189528958 0.1662801683 0.1756044368 0.1760057695</coefficients>
+          <coefficients id="eC" type="Array" optimize="yes"> -1.203168621 -1.210330142 -1.122994315 -0.951026869 -0.7301863065 -0.5209947759 -0.3472109079 -0.2133059861 -0.1482008463 -0.0902982917 -0.05011693677 -0.01262337015 0.01236827501 0.03164084149</coefficients>
         </correlation>
       </jastrow>
       <jastrow type="Two-Body" name="J2" function="bspline" print="yes">
         <correlation speciesA="u" speciesB="u" size="14" rcut="7.0">
-          <coefficients id="uu" type="Array" optimize="no"> 0.4046996043 0.3097287323 0.2250433859 0.1531751611 0.09520341001 0.0479624521 0.009805348449 -0.02067705592 -0.04391168728 -0.06098656129 -0.07173843562 -0.07761584011 -0.0682248235 -0.05521388953</coefficients>
+          <coefficients id="uu" type="Array" optimize="yes"> 0.4948273373 0.4027606842 0.3169567445 0.2441761678 0.1828179528 0.1320445164 0.09036415937 0.05636304584 0.02906845261 0.006777240742 -0.01154030473 -0.02606747758 -0.03187088198 -0.03280940856</coefficients>
         </correlation>
         <correlation speciesA="u" speciesB="d" size="14" rcut="7.0">
-          <coefficients id="ud" type="Array" optimize="no"> 0.9711660214 0.7722618149 0.6181420385 0.4972921218 0.4023039791 0.3238605579 0.2576314105 0.1999557789 0.1494187492 0.1039740948 0.06424490065 0.03240122936 0.00831895671 -0.005853646492</coefficients>
+          <coefficients id="ud" type="Array" optimize="yes"> 0.9336494679 0.7263016386 0.5670843044 0.4409099361 0.3433910453 0.2712077094 0.2176914174 0.1761975444 0.1419021034 0.1105222436 0.08014835036 0.05193944643 0.02802244007 0.01076572081</coefficients>
         </correlation>
       </jastrow>
       <jastrow name="J3" type="eeI" function="polynomial" source="ion0" print="yes">
         <correlation ispecies="C" especies="u" isize="3" esize="3" rcut="7.0">
-          <coefficients id="uuC" type="Array" optimize="no"> 0.0002386061307 6.427466291e-05 -0.0003661588305 -0.0002965292549 -2.491675039e-05 -3.876617813e-06 -0.0002776224993 -9.915059391e-05 -0.0003125379131 -1.588364061e-05 -0.0002793170176 0.0005458887306 7.730155297e-05 0.0003484838918 -7.607781987e-05 1.024272996e-07 0.0001077056008 0.0004967232094 -0.0006443448565 2.400673272e-05 -0.0002552295226 0.000155906999 -2.481590722e-05 0.0001188161269 -4.768630442e-05 1.150475655e-05</coefficients>
+          <coefficients id="uuC" type="Array" optimize="yes"> 0.0001272663611 0.0001682699133 0.0001537743783 -0.0002342965265 -8.75436025e-05 3.399620086e-05 0.0001186067867 -8.103595034e-05 0.0003625362486 -0.0001983740038 -0.0001273823633 -0.0002388496331 -0.0001123254316 0.0002550879737 6.673197732e-05 7.063114915e-06 0.0005181252187 3.033443227e-05 0.0003059479585 -5.646427285e-06 -0.0002850643822 -4.306668998e-05 7.24480708e-06 0.00011685902 -2.822529745e-06 -1.570418267e-06</coefficients>
         </correlation>
         <correlation ispecies="C" especies1="u" especies2="d" isize="3" esize="3" rcut="7.0">
-          <coefficients id="udC" type="Array" optimize="no"> -0.0002115292398 0.0003728477527 0.0007341190948 0.0001164396575 -7.590251928e-05 -1.074563197e-05 0.001153334124 2.176604993e-05 0.0004094650261 -0.0007708603849 0.0001431895245 -0.0005384584043 8.381516663e-06 9.384282154e-06 -5.327477417e-05 4.394272221e-06 0.001460352229 -0.0005721857573 0.0004771421779 -0.0001081923483 -0.0005156911675 2.455665724e-05 8.784134718e-06 0.000262541578 -3.969936929e-05 3.912241487e-06</coefficients>
+          <coefficients id="udC" type="Array" optimize="yes"> -0.000488974173 0.0004122111652 0.001325147978 0.0001002092538 -0.0002319692007 -1.749748132e-05 0.001608728172 -0.0002466153617 0.001153046462 -0.0006937292806 0.0001351046652 -0.0009357811269 -0.0003283267042 -5.343024935e-05 0.0001271543602 2.681654245e-05 0.001462844714 -0.0006882482511 0.0008970237965 5.78215595e-05 -0.000464738916 -9.329975227e-05 -1.043875248e-06 0.0002212023988 -1.231557496e-05 1.37813716e-06</coefficients>
         </correlation>
       </jastrow> 
+      <override_variational_parameters href="opt.s048.vp.h5"/>
     </wavefunction>
     <hamiltonian name="h0" type="generic" target="e">
       <pairpot type="coulomb" name="ElecElec" source="e" target="e"/>
@@ -88,9 +89,9 @@
 
   <!-- Initial VMC -->
   <qmc method="vmc" move="pbyp" checkpoint="0">
-    <parameter name="walkers_per_rank"    >  64            </parameter>
+    <parameter name="walkers_per_rank"    >  100           </parameter>
     <parameter name="warmupSteps"         >  10            </parameter>
-    <parameter name="blocks"              >  1000          </parameter>
+    <parameter name="blocks"              >  500           </parameter>
     <parameter name="steps"               >  5             </parameter>
     <parameter name="subSteps"            >  4             </parameter>
     <parameter name="timestep"            >  0.3           </parameter>
@@ -99,7 +100,7 @@
 
   <!-- DMC burn-in -->
   <qmc method="dmc" move="pbyp" checkpoint="0">
-    <parameter name="walkers_per_rank"    >  64            </parameter>
+    <parameter name="walkers_per_rank"    >  2000          </parameter>
     <parameter name="warmupSteps"         >  10            </parameter>
     <parameter name="blocks"              >  100           </parameter>
     <parameter name="steps"               >  10            </parameter>
@@ -109,33 +110,33 @@
 
   <!-- Production DMC -->
   <qmc method="dmc" move="pbyp" checkpoint="0">
-    <parameter name="walkers_per_rank"    >  1024          </parameter>
+    <parameter name="walkers_per_rank"    >  2000          </parameter>
     <parameter name="warmupSteps"         >  10            </parameter>
-    <parameter name="blocks"              >  1000          </parameter>
+    <parameter name="blocks"              >  500           </parameter>
     <parameter name="steps"               >  10            </parameter>
     <parameter name="timestep"            >  0.016         </parameter>
     <parameter name="nonlocalmoves"       >  v3            </parameter>
   </qmc>
   <qmc method="dmc" move="pbyp" checkpoint="0">
-    <parameter name="walkers_per_rank"    >  1024          </parameter>
+    <parameter name="walkers_per_rank"    >  2000          </parameter>
     <parameter name="warmupSteps"         >  10            </parameter>
-    <parameter name="blocks"              >  1000          </parameter>
+    <parameter name="blocks"              >  500           </parameter>
     <parameter name="steps"               >  20            </parameter>
     <parameter name="timestep"            >  0.008         </parameter>
     <parameter name="nonlocalmoves"       >  v3            </parameter>
   </qmc>
   <qmc method="dmc" move="pbyp" checkpoint="0">
-    <parameter name="walkers_per_rank"    >  1024          </parameter>
+    <parameter name="walkers_per_rank"    >  2000          </parameter>
     <parameter name="warmupSteps"         >  10            </parameter>
-    <parameter name="blocks"              >  1000          </parameter>
+    <parameter name="blocks"              >  500           </parameter>
     <parameter name="steps"               >  40            </parameter>
     <parameter name="timestep"            >  0.004         </parameter>
     <parameter name="nonlocalmoves"       >  v3            </parameter>
   </qmc>
   <qmc method="dmc" move="pbyp" checkpoint="0">
-    <parameter name="walkers_per_rank"    >  1024          </parameter>
+    <parameter name="walkers_per_rank"    >  2000          </parameter>
     <parameter name="warmupSteps"         >  10            </parameter>
-    <parameter name="blocks"              >  1000          </parameter>
+    <parameter name="blocks"              >  500           </parameter>
     <parameter name="steps"               >  80            </parameter>
     <parameter name="timestep"            >  0.002         </parameter>
     <parameter name="nonlocalmoves"       >  v3            </parameter>
