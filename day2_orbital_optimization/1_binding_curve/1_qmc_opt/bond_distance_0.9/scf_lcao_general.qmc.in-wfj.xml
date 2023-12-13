@@ -9,12 +9,12 @@ parameters based on the measured energies, variance, and statistics.
 
 -->
   <!--Name and Series number of the project.-->
-  <project id="scf_lcao_bd_0.8" series="0">
+  <project id="scf_lcao_bd_0.9" series="0">
         <parameter name="driver_version">batch</parameter>
   </project>
   <!--Link to the location of the Atomic Coordinates and the location of the Wavefunction.-->
-  <include href="scf_lcao_bd_0.8.structure.xml"/>
-  <include href="scf_lcao_bd_0.8.wfj.xml"/>
+  <include href="scf_lcao_bd_0.9.structure.xml"/>
+  <include href="scf_lcao_bd_0.9.wfj.xml"/>
   <!--Hamiltonian of the system. Default ECP filenames are assumed.-->
   <hamiltonian name="h0" type="generic" target="e">
     <pairpot name="ElecElec" type="coulomb" source="e" target="e" physical="true"/>
