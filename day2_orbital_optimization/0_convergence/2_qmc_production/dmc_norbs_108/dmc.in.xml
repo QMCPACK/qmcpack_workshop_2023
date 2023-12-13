@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <simulation>
-  <project id="opt" series="0">
+  <project id="dmc" series="0">
     <parameter name="driver_version"      > batched </parameter>   <!-- Using batched driver -->
     <application name="qmcpack" role="molecu" class="serial" version="1.0"/>
   </project>
@@ -103,7 +103,7 @@
     <parameter name="walkers_per_rank"    >  2000          </parameter>
     <parameter name="warmupSteps"         >  10            </parameter>
     <parameter name="blocks"              >  100           </parameter>
-    <parameter name="steps"               >  10            </parameter>
+    <parameter name="steps"               >  5             </parameter>
     <parameter name="timestep"            >  0.1           </parameter>
     <parameter name="nonlocalmoves"       >  v3            </parameter>
   </qmc>
@@ -113,7 +113,7 @@
     <parameter name="walkers_per_rank"    >  2000          </parameter>
     <parameter name="warmupSteps"         >  10            </parameter>
     <parameter name="blocks"              >  500           </parameter>
-    <parameter name="steps"               >  10            </parameter>
+    <parameter name="steps"               >  5             </parameter>
     <parameter name="timestep"            >  0.016         </parameter>
     <parameter name="nonlocalmoves"       >  v3            </parameter>
   </qmc>
@@ -121,7 +121,7 @@
     <parameter name="walkers_per_rank"    >  2000          </parameter>
     <parameter name="warmupSteps"         >  10            </parameter>
     <parameter name="blocks"              >  500           </parameter>
-    <parameter name="steps"               >  20            </parameter>
+    <parameter name="steps"               >  10            </parameter>
     <parameter name="timestep"            >  0.008         </parameter>
     <parameter name="nonlocalmoves"       >  v3            </parameter>
   </qmc>
@@ -129,7 +129,7 @@
     <parameter name="walkers_per_rank"    >  2000          </parameter>
     <parameter name="warmupSteps"         >  10            </parameter>
     <parameter name="blocks"              >  500           </parameter>
-    <parameter name="steps"               >  40            </parameter>
+    <parameter name="steps"               >  20            </parameter>
     <parameter name="timestep"            >  0.004         </parameter>
     <parameter name="nonlocalmoves"       >  v3            </parameter>
   </qmc>
@@ -137,7 +137,7 @@
     <parameter name="walkers_per_rank"    >  2000          </parameter>
     <parameter name="warmupSteps"         >  10            </parameter>
     <parameter name="blocks"              >  500           </parameter>
-    <parameter name="steps"               >  80            </parameter>
+    <parameter name="steps"               >  40            </parameter>
     <parameter name="timestep"            >  0.002         </parameter>
     <parameter name="nonlocalmoves"       >  v3            </parameter>
   </qmc>
