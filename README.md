@@ -21,9 +21,9 @@ Recordings of the presentations will be uploaded on the [QMCPACK YouTube channel
 ## Day 2 Presentations
 
 * "Accurate Electronic and Magnetic Properties of 2D Materials Using Quantum Monte Carlo Methods", Daniel Wines (NIST). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/Wines_2D_Materials_QMC.pdf)
-* "Spin Orbit Coupling in QMCPACK", Cody Melon (SNL).   
+* "Spin Orbit Coupling in QMCPACK", Cody Melton (SNL). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/Melton_Spin_Orbit.pdf)  
 * "Development of new correlation-consistent effective core potentials", Benjamin Kincade (NCSU). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/Kincaid_ccECP_talk.pdf)
-* "Orbital Optimization", Joshua Townsend and Amanda Dumi (SNL). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/orbopt_tutorial.pdf)
+* "Orbital Optimization", Joshua Townsend and Amanda Dumi (SNL). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/Townsend_Dumi_Orbital_Optimization_Tutorial.pdf)
 * "Use of the surrogate Hessian method for geometry optimization", Jaron Krogel (ORNL). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/Krogel_Surrogate_Hessian_Geometry_Optimization.pdf)
 * "Fermi surface calculation with QMCPACK", Jaron Krogel (ORNL). [Slides PDF](https://github.com/QMCPACK/qmcpack_workshop_2023/blob/main/Krogel_QMC_Fermi_Surface.pdf)
 
